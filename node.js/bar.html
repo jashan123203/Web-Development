@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress Bar Example</title>
+    <style>
+        .progress {
+            width: 50%;
+            height: 30px;
+            background-color: #ccc;
+            border-radius: 10px;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background-color: green;
+            width: 0%;
+            border-radius: 10px;
+            margin-right: 20px;
+            margin: 10px 20px;
+        }
+        .progress{
+           
+        }
+    </style>
+</head>
+<body>
+    <h1>Enter values:</h1>
+    <form id="myForm">
+        <input type="text" name="value1" placeholder="Value 1">
+        <input type="text" name="value2" placeholder="Value 2">
+        <input type="text" name="value3" placeholder="Value 3">
+        <input type="text" name="value4" placeholder="Value 4">
+        <input type="text" name="value5" placeholder="Value 5">
+        <input type="submit" value="Submit">
+    </form>
+    <div class="progress">
+        <div class="progress-bar" id="progressBar">
+
+        </div>
+    </div>
+    <div id="displayValues"></div>
+    
+    <script>
+        document.getElementById('myForm').addEventListener('submit', function (event) {
+            event.preventDefault();
+            let inputValues = [];
+            for (let i = 1; i <= 5; i++) {
+                let inputValue = document.forms['myForm'][`value${i}`].value;
+                if (inputValue !== '') {
+                    inputValues.push(inputValue);
+                }
+            }
+            displayValues(inputValues);
+            updateProgressBar(inputValues.length);
+        });
+
+        function displayValues(values) {
+            document.getElementById('displayValues').innerHTML = '';
+            for (let value of values) {
+                document.getElementById('displayValues').innerHTML += `<p>${value}</p>`;
+            }
+        }
+
+        function updateProgressBar(count) {
+            let percent = (count / 5) * 100;
+            document.getElementById('progressBar').style.width = `${percent}%`;
+            document.getElementById('progressBar').innerText = (progressBar.style.width)     
+        }
+    </script>
+</body>
+</html>

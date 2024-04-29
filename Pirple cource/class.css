@@ -1,0 +1,20 @@
+.container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .title {
+    font-size: 3rem;
+    color: blue;
+  }
+  
+  .description {
+    font-size: 1.2rem;
+    color: gray;
+  }
+  .my-unordered-list {
+    list-style-image: url('path/to/your/image.png');
+  }
+  .my-ordered-list {
+    list-style-type: upper-roman;
+  }

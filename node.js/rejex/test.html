@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex Test</title>
+</head>
+<body>
+    <div class="text"></div>
+    <script>
+        var url = window.location.href;
+        const regex = /[?&]name=([^&]+)&email=([^&]+)/;
+        const match = regex.exec(url);
+        if (match) {
+            const name = decodeURIComponent(match[1]);
+            const email = decodeURIComponent(match[2]);
+            console.log("Name:", name);
+            console.log("Email:", email);
+            document.querySelector('.text').innerHTML = `Name: ${name} <br>Email: ${email}`;
+        } 
+        else {
+            try {
+                document.querySelector('.text').innerHTML = "Name and/or email not found in URL.";
+            }
+            catch (error) {
+                console.error("An error occurred:", error);
+            }
+        }
+        document.write(window.location.href)
+    </script>
+</body>
+</html>

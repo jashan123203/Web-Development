@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 50vh;
+            height: 50vh;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <h1>total number <span id="heading1"></span></h1>
+    </div>
+    <script>
+        document.getElementById("div1").addEventListener('mousemove',myfan2)
+        var i=0;
+        function myfan2(){
+         document.getElementById("heading1").innerText = i++;
+         document.getElementById("div1").style.backgroundColor='red';
+         if (i == 100 && i==200);{
+         document.getElementById("div1").style.backgroundColor='blue';
+         }
+        }
+        
+    </script>
+</body>
+</html>
