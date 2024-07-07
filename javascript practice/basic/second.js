@@ -41,3 +41,18 @@
 // console.log(cond1 || cond2)
 // console.log(cond1 + cond2)
 
+// prompt
+
+
+// let number = prompt("enter a number");
+
+// if (num % 3===0) {
+//     console.log(num,"is a multiple of 3");
+    
+// } else {
+//     console.log(num,"is not a multiple of 3");
+    
+// }
+
+
+
