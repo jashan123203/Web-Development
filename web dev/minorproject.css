@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('image/hawamahal.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+.header, .footer{
+    position: fixed;
+    left: 0;
+    width: 100%;
+    background-color: rgba(80, 77, 77, 0.8);
+    color: white;
+    text-align: center;
+    padding: 5px;
+   
+}
+.header{
+    font-size: 20px;
+    top: 0;
+}
+.footer{
+    bottom: 0;
+}
+
+.content {
+    padding: 40px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); 
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.gallery-item {
+    width: calc(33.333% - 20px);
+    margin-bottom: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 10px;
+}
+
+.gallery-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.gallery-item p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #333;
+}
+@media(max-width:1200px){
+    .gallery-item{
+        width: calc(50% - 20px);
+    }
+}
+@media(max-width:768px){
+    .gallery-item{
+        width:calc(100% - 20px)
+    }
+}
